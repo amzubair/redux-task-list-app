@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 
 import apiConfig from "../../config/api";
 import * as taskActions from "./task-action-types";
@@ -15,9 +16,9 @@ export const getTask = () => async (dispatch) => {
       });
     }, 3000);
   } catch (error) {
-    console.log(error);
     dispatch({
       type: taskActions.GET_TASKS_FAILURE,
     });
+    toast.error(error.message);
   }
 };

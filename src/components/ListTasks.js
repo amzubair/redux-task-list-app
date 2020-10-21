@@ -19,6 +19,11 @@ export default function ListTasks() {
 
   return (
     <Container>
+      {!taskIsLoadingSelector && !taskSelector.length && (
+        <div className="d-flex justify-content-center mt-5">
+          <h4>No Data</h4>
+        </div>
+      )}
       {taskIsLoadingSelector && (
         <div className="d-flex justify-content-center page-loader">
           <div className="spinner-border" role="status">

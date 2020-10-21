@@ -1,12 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
+import { toast } from "react-toastify";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.min.css";
 
 import store from "./store";
+
+toast.configure({
+  autoClose: 1500,
+  position: "bottom-right",
+  hideProgressBar: true,
+});
 
 ReactDOM.render(
   <React.StrictMode>
