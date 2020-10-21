@@ -11,6 +11,8 @@ const taskReducer = (state = initialState, { type, payload }) => {
         ...state,
         data: payload,
       };
+    default:
+      return state;
   }
 };
 
