@@ -1,14 +1,14 @@
 import axios from "axios";
 
-import apiConfig from "../config/api";
-import { GET_TASK } from "./task-action-types";
+import apiConfig from "../../config/api";
+import * as taskActions from "./task-action-types";
 
 export const getTask = () => async (dispatch) => {
   try {
     const tasks = await axios.get(`${apiConfig}/tasks`);
 
     dispatch({
-      type: GET_TASK,
+      type: taskActions.GET_TASK,
       payload: tasks.data,
     });
   } catch (error) {

@@ -1,4 +1,4 @@
-import { GET_TASK } from "./task-action-types";
+import * as taskActions from "./task-action-types";
 
 const initialState = {
   data: [],
@@ -6,7 +6,7 @@ const initialState = {
 
 const taskReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case GET_TASK:
+    case taskActions.GET_TASKS:
       return {
         ...state,
         data: payload,
