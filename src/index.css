@@ -18,3 +18,8 @@ code {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.task-completed {
+  text-decoration: line-through;
+  color: lightseagreen;
+}
